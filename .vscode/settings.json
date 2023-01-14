@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "files.eol": "\n",
+}
