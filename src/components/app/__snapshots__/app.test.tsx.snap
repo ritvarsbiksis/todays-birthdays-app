@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders header element 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  margin: 0;
+  color: darkslategray;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+<div
+    style="padding: 20px;"
+  >
+    <header
+      class="emotion-0"
+    >
+      <h1
+        class="emotion-1"
+      >
+        Today's birthdays
+      </h1>
+    </header>
+    <button
+      type="button"
+    >
+      Load data
+    </button>
+  </div>
+</DocumentFragment>
+`;
