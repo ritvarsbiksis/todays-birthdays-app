@@ -6,11 +6,13 @@ import { App } from './app'
 expect.addSnapshotSerializer(createSerializer())
 
 describe('App', () => {
-  test('renders header element', () => {
+  test('renders correctly', () => {
     const { asFragment } = render(<App />)
-
-    const header = screen.getByRole('banner')
-    expect(header).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders header element', () => {
+    render(<App />)
+    expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 })

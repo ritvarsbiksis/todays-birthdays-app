@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders header element 1`] = `
+exports[`App renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   margin-bottom: 10px;
@@ -25,9 +25,7 @@ exports[`App renders header element 1`] = `
         Today's birthdays
       </h1>
     </header>
-    <button
-      type="button"
-    >
+    <button>
       Load data
     </button>
   </div>

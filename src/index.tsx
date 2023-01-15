@@ -1,16 +1,23 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { App } from 'components/app/app'
+import { GlobalStyles } from 'styles/global-styles'
 
 import reportWebVitals from './reportWebVitals'
-import './styles/global.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const queryClient = new QueryClient()
 
 root.render(
   <StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <GlobalStyles />
+      <App />
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+    </QueryClientProvider>
   </StrictMode>,
 )
 
