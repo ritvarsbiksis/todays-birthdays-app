@@ -7,6 +7,7 @@ import { App } from 'components/app/app'
 import { GlobalStyles } from 'styles/global-styles'
 
 import reportWebVitals from './reportWebVitals'
+import { ErrorBoundary } from 'components/error-boundary/error-boundary'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const queryClient = new QueryClient()
@@ -15,7 +16,9 @@ root.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <GlobalStyles />
-      <App />
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
     </QueryClientProvider>
   </StrictMode>,
